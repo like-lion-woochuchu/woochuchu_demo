@@ -1,0 +1,277 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "nanumsquare";
+        background-color: #fcecdd;
+      }
+      .navBar {
+        background-color: #f9b575;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .brandName {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 230px;
+        font-size: 25px;
+        font-weight: 1000;
+        margin-left: 20px;
+      }
+      .menus {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Black Han Sans";
+        font-size: 30px;
+        width: 520px;
+        margin-right: 40px;
+      }
+      .bodyDiv {
+        display: flex;
+        justify-content: center;
+        overflow: auto;
+      }
+      section {
+        background-color: rgb(255, 255, 255);
+
+        width: 500px;
+        min-height: calc(100vh - 90px);
+      }
+      .instagramDiv {
+        height: 930px;
+        border-bottom: 1px solid rgb(136, 136, 136);
+      }
+      .instagramIdDiv {
+        display: flex;
+        align-items: center;
+        height: 100px;
+      }
+      .instagramProfilePic {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        margin-left: 15px;
+      }
+      .instagramProfileWriterName {
+        margin-left: 15px;
+        font-size: 22px;
+        font-weight: 800;
+      }
+      .instagramPicDiv {
+        display: flex;
+        width: 100%;
+
+        height: 600px;
+      }
+      .instagramBottomContentsDiv {
+        display: flex;
+        flex-direction: column;
+        height: 230px;
+        width: 100%;
+      }
+      .instagramBottomBtnDiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 55px;
+        width: 90px;
+        margin-left: 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .instagramBtns {
+        height: 35px;
+        width: 35px;
+      }
+      .instagramHeartNum {
+        margin-left: 25px;
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 5px;
+        width: 420px;
+      }
+      .instagramText {
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 10px;
+        margin-left: 25px;
+        width: 420px;
+      }
+      .instagramComments {
+        font-size: 20px;
+        font-weight: 800;
+        color: rgb(136, 136, 136);
+        margin-left: 25px;
+        width: 420px;
+      }
+
+      /*여기서부터 작성*/
+      .tab_title{
+          text-align: center;
+          font-family: "nanumsquare";
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+      }
+      .block_wrap{
+        width: 500px;
+        display: block;
+        padding-top: 0px;
+        padding-left: 62px;
+        padding-right: 62px;
+        padding-bottom: 0px;
+      }
+      .lost_block{
+        width: 170px;
+        display: inline-block;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        border-style: inset;
+        border-color: black;
+        border-radius: 5%;
+        text-align: center;
+      }
+      .lost_block_right{
+        width: 170px;
+        display: inline-block;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        border-style: inset;
+        border-color: black;
+        border-radius: 5%;
+        text-align: center;
+      }
+      .lost_image{
+        width: 100%;
+        border-top-left-radius: 4%;
+        border-top-right-radius: 4%;
+      }
+      h5{
+        margin-top: 0.5rem;
+      }
+      .new_post{
+        position: relative;
+        left: 145px;
+        bottom: 15px;
+        height: 40px;
+        border-style: solid;
+        border-radius: 8%;
+        border-color: #fcecdd;
+        background-color: #fcecdd;
+        color:  #f9b575;
+        box-sizing: border-box;
+      }
+      .new_post:hover{
+        border-color: #f9b575;
+        background-color: #f9b575;
+        color:  #fcecdd;
+      }
+    </style>
+    <title>WOOCHUCHU</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navBar">
+        <a
+          href="{% url 'index' %}"
+          style="color: black; text-decoration: none"
+        >
+          <img class="brandName" src="{% static 'image/logo.png' %}" />
+        </a>
+
+        <div class="menus">
+          <a
+            href="{% url 'lost' %}"
+            style="color: black; text-decoration: none"
+          >
+            <div>찾아주기</div>
+          </a>
+
+          <a
+            href="{% url 'adopt' %}"
+            style="color: black; text-decoration: none"
+          >
+            <div>가족되기</div>
+          </a>
+
+          <a
+            href="{% url 'tip' %}"
+            style="color: black; text-decoration: none"
+          >
+            <div>꿀팁공유</div>
+          </a>
+
+          <a
+            href=""
+            style="color: black; text-decoration: none"
+          >
+            <div>마이페이지</div>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="bodyDiv">
+      <section>
+        <h1 class="tab_title"><b>찾아주세요</b></h1>
+        <div class="block_wrap">
+            <a href="{% url 'lost_detail' %}"><div class="lost_block">
+              <img class="lost_image" src="https://t1.daumcdn.net/cfile/tistory/99A8F7385C00D4A416">
+              <h5 style="color: black;">이름: 하니</h5>
+              <p style="color: black;">서울시 동대문구 이문1동<br>
+              실종날짜: 2021.06.24</p>
+            </div></a>
+            <div class="lost_block_right" style=" cursor: pointer;" onclick="location.href='';">
+              <img class="lost_image" src="https://i.pinimg.com/236x/1d/f6/5a/1df65a357351d62599c20fb30bee2634.jpg">
+              <h5>이름: 인절미</h5>
+              <p>서울시 동대문구 이문2동<br>
+              실종날짜: 2021.06.20</p>
+            </div>
+            <div class="lost_block" style=" cursor: pointer;" onclick="location.href='';">
+              <img class="lost_image" src="https://yt3.ggpht.com/ytc/AAUvwnhg9TxDXfPcCYs0dMkGcAdtKv-VKNHoLF-mWJRw2Q=s900-c-k-c0x00ffffff-no-rj">
+              <h5>이름: 초코</h5>
+              <p>서울시 동대문구 청량리동<br>
+              실종날짜: 2021.06.19</p>
+            </div>
+            <div class="lost_block_right" style=" cursor: pointer;" onclick="location.href='';">
+              <img class="lost_image" src="https://i.guim.co.uk/img/media/d2fce9f340f97b2c8a8fba05aa064395657e9c62/0_193_5787_3472/master/5787.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=28b6007b9554839e014e25d72bd41404">
+              <h5>이름: 아리</h5>
+              <p>서울시 동대문구 이문1동<br>
+              실종날짜: 2021.06.24</p>
+            </div>
+            <button class="new_post">동물 등록</button>
+          </div>
+      </section>
+    </div>
+  </body>
+</html>

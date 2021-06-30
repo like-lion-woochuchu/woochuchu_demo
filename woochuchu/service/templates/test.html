@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -374,29 +373,29 @@
     <header>
       <nav class="navBar">
         <a
-          href="{% url 'index' %}"
+          href="https://www.naver.com/"
           style="color: black; text-decoration: none"
         >
-          <img class="brandName" src="{% static 'image/logo.png' %}" />
+          <img class="brandName" src="../images/logo.png" />
         </a>
 
         <div class="menus">
           <a
-            href="{% url 'lost' %}"
+            href="https://www.naver.com/"
             style="color: black; text-decoration: none"
           >
             <div>찾아주기</div>
           </a>
 
           <a
-            href="{% url 'adopt' %}"
+            href="https://www.naver.com/"
             style="color: black; text-decoration: none"
           >
             <div>가족되기</div>
           </a>
 
           <a
-            href="{% url 'tip' %}"
+            href="https://www.naver.com/"
             style="color: black; text-decoration: none"
           >
             <div>꿀팁공유</div>
@@ -411,7 +410,7 @@
               <div class="drawerProfile">
                 <img
                   class="drawerProfilePic"
-                  src="https://cdn.mos.cms.futurecdn.net/VSy6kJDNq2pSXsCzb6cvYF.jpg"
+                  src="../images/메인페이지프로필사진.jpg"
                 />
                 <div class="drawerProfileId">심통난고앵이 님</div>
                 <button class="drawerLogOutBtn">로그아웃</button>
@@ -441,33 +440,117 @@
                 </ul>
               </div>
             </div>
+          </div>
         </div>
       </nav>
     </header>
     <div class="bodyDiv">
       <div class="fab">+</div>
+
       <section>
-        {% for feed in main_feeds %}
         <div class="instagramDiv">
           <div class="instagramIdDiv">
-            <img class="instagramProfilePic" src="{{feed.user.profile_img_url}}" />
-            <div class="instagramProfileWriterName">{{feed.user.name}}</div>
+            <img
+              class="instagramProfilePic"
+              src="../images/인스타프로필1.jpg"
+            />
+            <div class="instagramProfileWriterName">woochuchu</div>
           </div>
-          <img class="instagramPicDiv" src="{{feed.img_url}}" />
+          <img class="instagramPicDiv" src="../images/인스타사진1.jpg" />
           <div class="instagramBottomContentsDiv">
             <div class="instagramBottomBtnDiv">
-              <img class="instagramBtns" src="{% static 'image/like.png' %}" />
-              <img class="instagramBtns" src="{% static 'image/comment.png' %}" />
+              <img class="instagramBtns" src="../images/heart.png" />
+              <img class="instagramBtns" src="../images/comment.png" />
             </div>
-            <div class="instagramHeartNum">좋아요 {{feed.like}}개</div>
+            <div class="instagramHeartNum">좋아요 9개</div>
             <!-- <div class="instagramWriterName">woochuchu</div> -->
             <div class="instagramText">
-              {{feed.body}}
+              울집 막내 호두입니다. 너무 귀엽죠? 귀가 크고 다리가 짧은 아기
+              고양이입니다.
             </div>
-            <div class="instagramComments">댓글 10개 모두 보기</div>
+            <div class="instagramComments">댓글 13개 모두 보기</div>
           </div>
         </div>
-        {% endfor %}
+        <div class="instagramDiv">
+          <div class="instagramIdDiv">
+            <img
+              class="instagramProfilePic"
+              src="../images/인스타프로필2.jpeg"
+            />
+            <div class="instagramProfileWriterName">five_dogs</div>
+          </div>
+          <img class="instagramPicDiv" src="../images/인스타사진2.jpg" />
+          <div class="instagramBottomContentsDiv">
+            <div class="instagramBottomBtnDiv">
+              <img class="instagramBtns" src="../images/heart.png" />
+              <img class="instagramBtns" src="../images/comment.png" />
+            </div>
+            <div class="instagramHeartNum">좋아요 20개</div>
+            <!-- <div class="instagramWriterName">woochuchu</div> -->
+            <div class="instagramText">시고르자브종 다섯 남매들이에요!</div>
+            <div class="instagramComments">댓글 43개 모두 보기</div>
+          </div>
+        </div>
+        <div class="instagramDiv">
+          <div class="instagramIdDiv">
+            <img
+              class="instagramProfilePic"
+              src="../images/인스타프로필3.jpg"
+            />
+            <div class="instagramProfileWriterName">super_beagle</div>
+          </div>
+          <img class="instagramPicDiv" src="../images/인스타사진3.jpg" />
+          <div class="instagramBottomContentsDiv">
+            <div class="instagramBottomBtnDiv">
+              <img class="instagramBtns" src="../images/heart.png" />
+              <img class="instagramBtns" src="../images/comment.png" />
+            </div>
+            <div class="instagramHeartNum">좋아요 30개</div>
+            <!-- <div class="instagramWriterName">woochuchu</div> -->
+            <div class="instagramText">오랜만에 산책 나와서 한 컷 📸</div>
+            <div class="instagramComments">댓글 17개 모두 보기</div>
+          </div>
+        </div>
+        <div class="instagramDiv">
+          <div class="instagramIdDiv">
+            <img
+              class="instagramProfilePic"
+              src="../images/인스타프로필4.jpeg"
+            />
+            <div class="instagramProfileWriterName">little_tiger</div>
+          </div>
+          <img class="instagramPicDiv" src="../images/인스타사진4.jpg" />
+          <div class="instagramBottomContentsDiv">
+            <div class="instagramBottomBtnDiv">
+              <img class="instagramBtns" src="../images/heart.png" />
+              <img class="instagramBtns" src="../images/comment.png" />
+            </div>
+            <div class="instagramHeartNum">좋아요 31개</div>
+            <!-- <div class="instagramWriterName">woochuchu</div> -->
+            <div class="instagramText">엄근진 포즈의 작은 호랭이 🦁</div>
+            <div class="instagramComments">댓글 14개 모두 보기</div>
+          </div>
+        </div>
+        <div class="instagramDiv">
+          <div class="instagramIdDiv">
+            <img
+              class="instagramProfilePic"
+              src="../images/인스타프로필5.jpg"
+            />
+            <div class="instagramProfileWriterName">cat_and_dog</div>
+          </div>
+          <img class="instagramPicDiv" src="../images/인스타사진5.jpg" />
+          <div class="instagramBottomContentsDiv">
+            <div class="instagramBottomBtnDiv">
+              <img class="instagramBtns" src="../images/heart.png" />
+              <img class="instagramBtns" src="../images/comment.png" />
+            </div>
+            <div class="instagramHeartNum">좋아요 17개</div>
+            <!-- <div class="instagramWriterName">woochuchu</div> -->
+            <div class="instagramText">공원에서 날아다니는 중...</div>
+            <div class="instagramComments">댓글 16개 모두 보기</div>
+          </div>
+        </div>
       </section>
     </div>
   </body>

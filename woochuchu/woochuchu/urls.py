@@ -22,6 +22,13 @@ urlpatterns = [
     path('', views.main, name='main'),
     path('login/', views.login, name='login'),
     path('index/', views.index, name='index'),
+    path('tip/', views.tip, name='tip'),
+    path('tip/1', views.tip_detail, name='tip_detail'),
+    path('adopt/', views.adopt, name='adopt'),
+    path('adopt/1', views.adopt_detail, name='adopt_detail'),
+    path('lost/', views.lost, name='lost'),
+    path('lost/1', views.lost_detail, name='lost_detail'),
     path('make-user/', views.make_user, name='make_user'),
     path('make-post/', views.make_post, name='make_post'),
+    # path('test/', views.test, name='test'),
 ]

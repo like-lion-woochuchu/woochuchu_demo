@@ -1,0 +1,298 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "nanumsquare";
+        background-color: #fcecdd;
+      }
+      .navBar {
+        background-color: #f9b575;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .brandName {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 230px;
+        font-size: 25px;
+        font-weight: 1000;
+        margin-left: 20px;
+      }
+      .menus {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Black Han Sans";
+        font-size: 30px;
+        width: 520px;
+        margin-right: 40px;
+      }
+      .bodyDiv {
+        display: flex;
+        justify-content: center;
+        overflow: auto;
+      }
+      section {
+        background-color: rgb(255, 255, 255);
+
+        width: 500px;
+        min-height: calc(100vh - 90px);
+      }
+      .instagramDiv {
+        height: 930px;
+        border-bottom: 1px solid rgb(136, 136, 136);
+      }
+      .instagramIdDiv {
+        display: flex;
+        align-items: center;
+        height: 100px;
+      }
+      .instagramProfilePic {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        margin-left: 15px;
+      }
+      .instagramProfileWriterName {
+        margin-left: 15px;
+        font-size: 22px;
+        font-weight: 800;
+      }
+      .instagramPicDiv {
+        display: flex;
+        width: 100%;
+
+        height: 600px;
+      }
+      .instagramBottomContentsDiv {
+        display: flex;
+        flex-direction: column;
+        height: 230px;
+        width: 100%;
+      }
+      .instagramBottomBtnDiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 55px;
+        width: 90px;
+        margin-left: 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .instagramBtns {
+        height: 35px;
+        width: 35px;
+      }
+      .instagramHeartNum {
+        margin-left: 25px;
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 5px;
+        width: 420px;
+      }
+      .instagramText {
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 10px;
+        margin-left: 25px;
+        width: 420px;
+      }
+      .instagramComments {
+        font-size: 20px;
+        font-weight: 800;
+        color: rgb(136, 136, 136);
+        margin-left: 25px;
+        width: 420px;
+      }
+
+      /*여기서부터 작성*/
+      .tab_title{
+          text-align: center;
+          font-family: "nanumsquare";
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+      }
+      .block_wrap{
+        width: 500px;
+        display: block;
+        padding-top: 0px;
+        padding-left: 62px;
+        padding-right: 62px;
+        padding-bottom: 0px;
+      }
+      .lost_block{
+        width: 170px;
+        display: inline-block;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        border-style: inset;
+        border-color: black;
+        border-radius: 5%;
+        text-align: center;
+      }
+      .lost_block_right{
+        width: 170px;
+        display: inline-block;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        border-style: inset;
+        border-color: black;
+        border-radius: 5%;
+        text-align: center;
+      }
+      .image_box{
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      .lost_image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 4%;
+        border-top-right-radius: 4%;
+      }
+      .new_post{
+        position: relative;
+        left: 145px;
+        bottom: 15px;
+        height: 40px;
+        border-style: solid;
+        border-radius: 8%;
+        border-color: #fcecdd;
+        background-color: #fcecdd;
+        color:  #f9b575;
+        box-sizing: border-box;
+      }
+      .new_post:hover{
+        border-color: #f9b575;
+        background-color: #f9b575;
+        color:  #fcecdd;
+      }
+      h5{
+        margin-top: 0.5rem;
+      }
+    </style>
+    <title>WOOCHUCHU</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navBar">
+        <a
+          href="{% url 'index' %}"
+          style="color: black; text-decoration: none"
+        >
+          <img class="brandName" src="{% static 'image/logo.png' %}" />
+        </a>
+
+        <div class="menus">
+          <a
+            href="{% url 'lost' %}"
+            style="color: black; text-decoration: none"
+          >
+            <div>찾아주기</div>
+          </a>
+
+          <a
+            href="{% url 'adopt' %}"
+            style="color: black; text-decoration: none"
+          >
+            <div>가족되기</div>
+          </a>
+
+          <a
+            href="{% url 'tip' %}"
+            style="color: black; text-decoration: none"
+          >
+            <div>꿀팁공유</div>
+          </a>
+
+          <a
+            href=""
+            style="color: black; text-decoration: none"
+          >
+            <div>마이페이지</div>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="bodyDiv">
+      <section>
+        <h1 class="tab_title"><b>가족이 되어주세요</b></h1>
+        <div class="block_wrap">
+            <a href="{% url 'adopt_detail' %}"><div class="lost_block">
+              <div class="image_box">
+                <img class="lost_image" src="https://i.guim.co.uk/img/media/8a13052d4db7dcd508af948e5db7b04598e03190/0_294_5616_3370/master/5616.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=bcaa4eed2c1e6dab61c41a61e41433d9">
+             </div>
+              <h5 style="color: black;">고양이</h5>
+              <p style="color: black;">고양이 oo보호소<br>
+              3살 3kg<br>
+              순하고 사람을 좋아함</p>
+            </div></a>
+            <div class="lost_block_right" style=" cursor: pointer;" onclick="location.href='';">
+              <div class="image_box">
+                <img class="lost_image" src="https://mblogthumb-phinf.pstatic.net/MjAxOTAzMjlfMzcg/MDAxNTUzODI3OTU3NTg1.geQ7whX1F1DWXBeARbVmBfuqZWp_Db152hko56ZQneIg.5fjMBtfCJeBPcwr1CIndT4qQGbepVcgI9skIDJkEDq8g.JPEG.petianbooks/%EA%B0%95%EC%95%84%EC%A7%80_%EA%B0%B8%EC%9A%B0%EB%9A%B1.jpg?type=w800">
+             </div>
+              <h5>강아지</h5>
+              <p>강아지 oo보호소<br>
+              5살 4kg<br>
+              말괄량이임</p>
+            </div>
+            <div class="lost_block" style=" cursor: pointer;" onclick="location.href='';">
+              <div class="image_box">
+                <img class="lost_image" src="http://image.dongascience.com/Photo/2018/12/2d5efe44bdd02f3e2ec4e99189d89d18.jpg">
+             </div>
+              <h5>강아지</h5>
+              <p>강아지 xx보호소<br>
+              6살 10kg<br>
+              애교가 많음</p>
+            </div>
+            <div class="lost_block_right" style=" cursor: pointer;" onclick="location.href='';">
+              <div class="image_box">
+                <img class="lost_image" src="https://image-notepet.akamaized.net/resize/620x-/seimage/20191114%2F6a4c967c5b14197dd5d2c47424ae8e82.jpg">
+             </div>
+              <h5>강아지</h5>
+              <p>강아지 oo보호소<br>
+              2살 3.5kg<br>
+              순하고 겁이 많음</p>
+            </div>
+            <button class="new_post">동물 등록</button>
+          </div>
+        
+      </section>
+    </div>
+  </body>
+</html>

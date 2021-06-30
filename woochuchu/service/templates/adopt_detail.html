@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "nanumsquare";
+        background-color: #fcecdd;
+      }
+      .navBar {
+        background-color: #f9b575;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .brandName {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 230px;
+        font-size: 25px;
+        font-weight: 1000;
+        margin-left: 20px;
+      }
+      .menus {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Black Han Sans";
+        font-size: 30px;
+        width: 520px;
+        margin-right: 40px;
+      }
+      .bodyDiv {
+        display: flex;
+        justify-content: center;
+        overflow: auto;
+      }
+      section {
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+        min-height: calc(100vh - 90px);
+      }
+
+      /*여기서부터 작성*/
+      .tab_title{
+          text-align: center;
+          font-family: "nanumsquare";
+          margin-top: 1rem;
+      }
+      .main{
+          position: relative;
+          width: 500px;
+          height: 500px;
+      }
+      .lost_pic{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .lost_frame{
+          position: relative;
+          width: 500px;
+          height: 500px;
+      }
+      .frame_img{
+        width: 100%;
+        height: 100%;
+      }
+      .lost_animal{
+        position: relative;
+        left : 85px;
+        bottom : -136px;
+        width: 329px;
+        height: 264px;
+        overflow: hidden;
+        margin: 0 0 0 0;
+      }
+      .animal_img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .animal_name{
+          position: relative;
+          text-align: center;
+          top: 135px;
+          font-size: 30px;
+      }
+      .info{
+          margin-top: 20px;
+          margin-bottom: 20px;
+          margin-left: 20%;
+      }
+      .footer{
+          width: 500px;
+          position: fixed;
+          bottom: 3%;
+          max-height: 30%;
+          display: flex;
+          left: 60.5%;
+      }
+      .lyj_ul{
+        list-style: none;
+        max-height: 100%;
+        max-width: 100%;
+      }
+      .kakao{
+        height: 55px;
+        width: 55px;
+        margin-bottom: 25%;
+
+      }
+      .call{
+        height: 55px;
+        width: 55px;
+      }
+    </style>
+    <title>WOOCHUCHU</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navBar">
+        <a
+          href="{% url 'index' %}"
+          style="color: black; text-decoration: none"
+        >
+          <img class="brandName" src="{% static 'image/logo.png' %}" />
+        </a>
+
+        <div class="menus">
+          <a
+            href="{% url 'lost' %}"
+            style="color: black; text-decoration: none"
+          >
+            <div>찾아주기</div>
+          </a>
+
+          <a
+            href="{% url 'adopt' %}"
+            style="color: black; text-decoration: none"
+          >
+            <div>가족되기</div>
+          </a>
+
+          <a
+            href="{% url 'tip' %}"
+            style="color: black; text-decoration: none"
+          >
+            <div>꿀팁공유</div>
+          </a>
+
+          <a
+            href=""
+            style="color: black; text-decoration: none"
+          >
+            <div>마이페이지</div>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="bodyDiv">
+      <section>
+        <a href="adopt_main.html" style="color: black; text-decoration: none"><h1 class="tab_title"><b>가족이 되어주세요</b></h1></a>
+        <div class="main">
+            <div class="lost_pic">
+                <div class="lost_frame" style="position: relative; "><img src="adopt_frame.png" class="frame_img"></img></div>
+            </div>
+            <div class="lost_pic">
+                <p class="animal_name">고양이</p>
+                <div class="lost_animal"><img class="animal_img" src="https://i.guim.co.uk/img/media/8a13052d4db7dcd508af948e5db7b04598e03190/0_294_5616_3370/master/5616.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=bcaa4eed2c1e6dab61c41a61e41433d9" style="width: 100%; max-height: 100%;"></img></div>
+                
+            </div>
+        </div>
+            <div class="info">
+                <p>보호 지역 : 강아지 oo보호소</p>
+                <p>나이 : 3살</p>
+                <p>특징 : 귀가 뾰족하고 무늬가 예쁨</p>
+                <p>연락처 : 010-1234-5678</p>
+                <p>기타 : 외로움을 많이 타고 질투가 많으니, <br>외동냥이 가족에게 입양 되었으면 좋겠습니다.</p>
+            </div>
+            <footer class="footer">
+                <ul class="lyj_ul">
+                    <li>
+                        <div>
+                            <img src="kakao.png" class="kakao">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="">
+                                <img src="call.png" class="call">
+                        </div>
+                    </li>
+                </ul>
+            </footer>
+        </section>
+    </div>
+  </body>
+</html>
