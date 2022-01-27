@@ -21,3 +21,11 @@ make .env and write down SECRET_KEY:
 ```
 touch .env
 ```
+
+
+
+## 테스트
+<!--사용 gif -->
+|로그인|로그인|
+|:-:|:-:|
+|<img src=https://user-images.githubusercontent.com/75655613/151375599-0c337519-ae0f-4344-bb25-bdbb2eab00ea.gif>|<img src=https://user-images.githubusercontent.com/75655613/151375599-0c337519-ae0f-4344-bb25-bdbb2eab00ea.gif>|
