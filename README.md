@@ -16,6 +16,7 @@
 <img src="https://user-images.githubusercontent.com/75655613/151902704-c7a5a1ed-ac2f-42a0-bcce-fab1017d066e.jpeg" height="400px">
 </p>
 
+---
 ## 서비스 소개
 <p align="center">
 <img src="https://user-images.githubusercontent.com/75655613/151902003-ae9f1d23-12fa-4aca-b4ea-453459db0afb.jpeg" height="500px">
